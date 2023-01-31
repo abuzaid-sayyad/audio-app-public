@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+    <title>My Listening App</title>
+    <script src="/app.js" defer></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                boxShadow: {
+                    '3xl': '0 4px 60px rgb(0 0 0 / 50%)',
+                },
+                backgroundImage: {
+                    'grd-alpha' : 'linear-gradient(transparent 0,rgba(0,0,0,.5) 100%,#fff)',
+                    'grd-beta' : 'linear-gradient(rgba(0,0,0,.6) 0,#000 100%,#fff)',
+                }
+            }
+          }
+        }
+      </script>
+      <style>
+        .play{background-image: url(/images/icons/play.png);}
+        .pause{background-image: url(/images/icons/pause.png);}
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 9999px;
+            /* box-shadow: -100px 0 0 10px #43e5f7; */
+        }
+        /* .slider::-webkit-slider-runnable-track {
+            height: 20;
+            width: 10px;
+            -webkit-appearance: none;
+            color: #13bba4;
+            margin-top: -1px;
+            } */
+        /* @media screen and (-webkit-min-device-pixel-ratio:0) {
+            .slider {
+            overflow: hidden;
+            height: 10px;
+            width: 80px;
+            -webkit-appearance: none;
+            background-color: #9a905d;
+            }
+            
+            .slider::-webkit-slider-runnable-track {
+            height: 20;
+            width: 10px;
+            -webkit-appearance: none;
+            color: #13bba4;
+            margin-top: -1px;
+            }
+        } */
+    
+    /* .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+            height: 12px;
+      cursor: pointer;
+      background: #fff;
+      box-shadow: -80px 0 0 80px #43e5f7;
+    } */
+
+
+      </style>
+</head>
+<body class="bg-black" style="font-family: 'Poppins', sans-serif;">
+    <div class="sm:mb-[90px] mb-[140px]">
+        <div class="w-full bg-[#e84048] sm:min-h-[340px] min-h-[290px] p-3 sm:p-8 bg-grd-alpha flex">
+            <div class="flex flex-col items-end w-full mt-auto sm:flex-row">
+                <span class="bg-no-repeat bg-contain sm:h-[232px] sm:w-[232px] w-[144px] h-[144px] shadow-3xl sm:flex-shrink-0 inline-block mx-auto sm:mx-0" style="background-image: url(/images/song-images/ae-dil-hai-mushkil.jpg);"></span>
+                <div class="w-full sm:pl-6">
+                    <p class="text-sm font-semibold text-white hidden sm:block">ALBUM</p>
+                    <h2 class="sm:text-[40px] text-white font-bold my-2 sm:my-4 text-2xl">Deewana (Original Motion Picture)</h2>
+                    <div class="flex items-center">
+                        <span class="bg-no-repeat bg-contain h-6 w-6 rounded-full inline-block mr-2" style="background-image: url(https://i.scdn.co/image/ab67616d00001e020d345e6c5c252b8461dc3733);"></span>
+                        <span class="text-xs sm:text-base font-medium sm:font-semibold text-white">Nadeem Shravan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full absolute -z-10 h-[232px] bg-[#e84048] bg-grd-beta"></div>
+        <div class="w-full p-3 sm:p-8">
+            <div class="flex items-center">
+                <button class="h-10 w-10 sm:h-14 sm:w-14 rounded-full bg-[#1ed760] flex items-center justify-center">
+                    <svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 uPxdw"><path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path></svg>
+                </button>
+                <button class="mx-8 text-red-400">
+                    <svg role="img" height="32" width="32" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" fill="current-color" class="text-gray-300"><path d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"></path></svg>
+                </button>
+                <button>
+                    <svg role="img" height="32" width="32" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 uPxdw"><path d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                </button>
+            </div>
+            <div class="flex border-b border-[#ffffff1a] items-center justify-between my-1.5 sm:my-4 sm:px-5 py-3">
+                <div class="flex items-center">
+                    <span class="text-sm text-[#b3b3b3] font-normal">#</span>
+                    <p class="text-sm text-[#b3b3b3] font-normal ml-4">TITLE</p>
+                </div>
+                <div>
+                    <span class="inline-block bg-no-repeat bg-contain h-4 w-4" style="background-image: url(/images/icons/time.png);"></span>
+                </div>
+            </div>
+            <div id="song-list"></div>
+        </div>
+    </div>
+    <footer class="w-full border-t border-[#282828] bg-[#181818] sm:h-[90px] fixed bottom-0">
+        <div class="w-full h-full sm:flex items-center sm:px-5 py-3 sm:py-0 px-3">
+            <div class="sm:w-[30%] flex items-center">
+                <img id="song-image" class="bg-no-repeat bg-contain sm:h-14 sm:w-14 w-10 h-10 shadow-3xl flex-shrink-0" src="/images/song-images/kahani-suno.jpg">
+                <div class="w-full pl-4">
+                    <p id="masterSongName" class="text-xs sm:text-sm text-white font-medium">Kahani Suno 2.0</p>
+                    <p id="singer" class="text-[10px] sm:text-xs text-gray-300 font-normal">Kaifi Khalil</p>
+                </div>
+            </div>
+            <div class="sm:w-[40%] px-10">
+                <div class="flex justify-center items-center">
+                    <button id="previous" aria-label="Previous" data-testid="control-button-skip-back" aria-expanded="false" class="inline-block bg-no-repeat bg-contain h-4 w-4" style="background-image: url(/images/icons/previous.png);"></button>
+                    <button id="masterPlay" class="sm:w-10 sm:h-10 w-8 h-8 rounded-full bg-white flex items-center justify-center mx-7" aria-label="Play" data-testid="control-button-playpause" style="--button-size:32px;" aria-expanded="false">
+                        <span id="pp" class="inline-block bg-no-repeat bg-contain h-4 w-4 play flex-shrink-0"></span>
+                    </button>
+                    <button id="next" aria-label="Next" data-testid="control-button-skip-forward" aria-expanded="false" class="inline-block bg-no-repeat bg-contain h-4 w-4" style="background-image: url(/images/icons/next.png)"></button>
+                </div>
+                <div class="sm:mt-2 flex items-center">
+                    <input type="range" id="progressBar" value="0" class="w-full h-0.5 sm:h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm">
+                    <span id="musicDuration" class="text-xs font-normal text-gray-300 inline-block ml-3 flex-shrink-0">3:36</span>
+                </div>
+            </div>
+            <div class="w-[30%] sm:flex items-center justify-end hidden">
+                <button class="volume-bar__icon-button control-button" aria-label="Mute" aria-describedby="volume-icon" data-testid="volume-bar-toggle-mute-button" aria-expanded="false">
+                    <span class="inline-block bg-no-repeat bg-contain h-4 w-4" style="background-image: url(/images/icons/low-volume.png);"></span>
+                </button>
+                <input type="range" id="volume-controller" min="0" max="1" step="0.01" value="1" class="w-28 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm ml-2 slider">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
