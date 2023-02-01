@@ -49,7 +49,7 @@ allSong.forEach((item, index) => {
         const min = Math.floor(duration/60);
         const sec = Math.floor(duration%60);
         const time = `${min} : ${sec}`;
-        songList += `<div class="flex items-center justify-between sm:px-5 py-2 rounded-md">
+        songList += `<div class="flex items-center justify-between sm:px-5 py-2 rounded-md hover:bg-zinc-900 cursor-pointer">
         <div class="flex items-center">
             <span class="text-sm sm:text-base text-[#b3b3b3] font-medium">${index +1}</span>
             <div class="ml-5">
