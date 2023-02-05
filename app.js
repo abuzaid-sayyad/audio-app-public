@@ -49,7 +49,7 @@ allSong.forEach((item, index) => {
         const min = Math.floor(duration/60);
         const sec = Math.floor(duration%60);
         const time = `${min} : ${sec}`;
-        songList += `<div class="flex items-center justify-between sm:px-5 py-2 rounded-md hover:bg-zinc-900 cursor-pointer">
+        songList += `<div class="flex items-center justify-between sm:px-5 py-2 rounded-md hover:bg-zinc-900 cursor-pointer play-song" data-song-id="${index}">
         <div class="flex items-center">
             <span class="text-sm sm:text-base text-[#b3b3b3] font-medium">${index +1}</span>
             <div class="ml-5">
@@ -60,16 +60,32 @@ allSong.forEach((item, index) => {
         <p class="text-xs sm:text-sm text-[#b3b3b3] font-normal song">${time}</p>
     </div>`;
 document.getElementById("song-list").innerHTML = songList;
+let all_lists = document.getElementsByClassName('play-song');
+        for (var l = 0; l < all_lists.length; l++) {
+            all_lists[l].addEventListener('click', function () {
+                let selectedIndex = this.getAttribute("data-song-id");
+                audioElement.src = allSong[selectedIndex].filePath;
+                masterSongName.innerText = allSong[selectedIndex].songName;
+                singer.innerText = allSong[selectedIndex].singer;
+                songImage.src = allSong[selectedIndex].image;
+                audioElement.currentTime = "0";
+                audioElement.play();
+                masterPlay.classList.remove("bg-white");
+                masterPlay.classList.add("bg-green-500");
+                pp.classList.remove("play");
+                pp.classList.add("pause");
+            });
+        }
 }
 });
 
-let song = Array.from(document.getElementsByClassName("song"));
-song.forEach(ele => {
-    console.log(ele);
-    ele.addEventListener("click", (e)=>{
-        console.log(e.target);
-    })
-})
+// let song = Array.from(document.getElementsByClassName("song"));
+// song.forEach(ele => {
+//     console.log(ele);
+//     ele.addEventListener("click", (e)=>{
+//         console.log(e.target);
+//     })
+// })
 
 masterPlay.addEventListener("click", ()=>{
     if(audioElement.paused || audioElement.currentTime < 0){
