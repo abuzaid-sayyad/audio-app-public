@@ -36,6 +36,15 @@ const allSong = [
     {songName: "Tera Hone Laga hu", singer:"Atif Aslam, Alisha Chinai", filePath: "/audio/tera-hone-laga-hu.mp3", image: "/images/song-images/ajao-meri-tamanna.jpg"},
     {songName: "I Love You", singer:"Clinton Cerejo, Ash King", filePath: "/audio/i-love-you.mp3", image: "/images/song-images/i-love-you.jpg"},
     {songName: "Humko Pyar Hua", singer:"K.K", filePath: "/audio/humko-pyar-hua.mp3", image: "/images/song-images/humko-pyar-hua.jpg"},
+    {songName: "Zulfaan", singer:"Starboy X, Sarrb", filePath: "/audio/zulfaan.mp3", image: "/images/song-images/zulfaan.jpg"},
+    {songName: "KTMBK", singer:"Hanita Bhambri, Zaeden", filePath: "/audio/ktmbs.mp3", image: "/images/song-images/ktmbs.jpg"},
+    {songName: "Tera Wo Pyar", singer:"Momina Mustehsan, Asim Azhar", filePath: "/audio/tera-wo-pyar.mp3", image: "/images/song-images/tera-wo-pyar.jpg"},
+    {songName: "Iraaday", singer:"Abdul Hannan", filePath: "/audio/iraaday.mp3", image: "/images/song-images/iraaday.jpg"},
+    {songName: "Wishes", singer:"Jamie Miller", filePath: "/audio/wishes.mp3", image: "/images/song-images/wishes.jpg"},
+    {songName: "Afreen Afreen", singer:"Rahat Fateh Ali, Momina Mustehsan", filePath: "/audio/afreen-afreen.mp3", image: "/images/song-images/afreen-afreen.jpg"},
+    {songName: "Hona Tha Pyar", singer:"Atif Aslam, Hadiqa Kiani", filePath: "/audio/hona-tha-pyar.mp3", image: "/images/song-images/hona-tha-pyar.jpg"},
+    {songName: "Woh Lamhe Woh Baatein", singer:"Atif Aslam", filePath: "/audio/woh-lamhe.mp3", image: "/images/song-images/woh-lamhe.jpg"},
+    {songName: "Maula Mere Maula", singer:"Roop Kumar Rathod", filePath: "/audio/maula-mere-maula.mp3", image: "/images/song-images/maula-mere-maula.webp"},
 ];
 
 var songList = "";
